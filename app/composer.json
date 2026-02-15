@@ -1,0 +1,41 @@
+{
+    "name": "slim/steganography",
+    "version": "0.0.1",
+    "require": {
+        "php": "^8.3",
+        "ext-gd": "*",
+        "ext-json": "*",
+        "php-di/php-di": "^6.4",
+        "slim/psr7": "^1.5",
+        "slim/slim": "^4.10"
+    },
+    "require-dev": {
+        "jangregor/phpstan-prophecy": "^1.0.0",
+        "laravel/pint": "^1.13",
+        "phpstan/extension-installer": "^1.2.0",
+        "phpstan/phpstan": "^1.8",
+        "phpunit/phpunit": "^9.5.26"
+    },
+    "config": {
+        "allow-plugins": {
+            "phpstan/extension-installer": true
+        },
+        "process-timeout": 0,
+        "sort-packages": true
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "start": "php -S localhost:8080 -t public",
+        "test": "phpunit --testdox",
+        "lint": "pint"
+    }
+}
