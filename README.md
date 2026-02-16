@@ -31,8 +31,8 @@ curl -X POST http://localhost:8080/bit/encode \
 For **Windows PowerShell** users:
 
 ```
-curl.exe -X POST http://localhost:8080/alpha/encode `
-  -F "image=@examples/alpha.png" `
+curl.exe -X POST http://localhost:8080/bit/encode `
+  -F "image=@examples/bit.png" `
   -F "message=My secret message" `
   --output encoded.png
 ```
@@ -50,8 +50,8 @@ curl -X POST http://localhost:8080/bit/decode \
 For **Windows PowerShell** users:
 
 ```
-curl.exe -X POST http://localhost:8080/alpha/decode `
-  -F "image=@examples/alpha_encoded.png"
+curl.exe -X POST http://localhost:8080/bit/decode `
+  -F "image=@examples/bit_encoded.png"
 ```
 
 ## Steganography Algorithms
