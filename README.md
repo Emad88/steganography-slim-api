@@ -153,7 +153,7 @@ This project served as an exercise in exploring a modern micro-framework (Slim 4
 
 By implementing an OpenAPI schema, we could decouple request validation from the Controllers. This would provide automated validation layers and enable interactive documentation via *Swagger UI*, making the API easier for third-party developers to consume.
 
-### API Authentiation
+### API Authentication
 
 For production environments, I would implement *Static Token Authentication* to keep the service stateless and database-free. A secret key stored in the .env file would be validated against the `X-API-Key` request header.
 
