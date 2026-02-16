@@ -18,7 +18,9 @@ The service exposes two endpoints for each algorithm. You can test them using cu
 
 ### Encode a message
 Hide a string inside an image.
+
 **Endpoint:** `POST /(alpha|bit)/encode`
+
 **Payload:** `image` (file), `message` (string)
 
 ```
@@ -39,7 +41,9 @@ curl.exe -X POST http://localhost:8080/bit/encode `
 
 ### Decode a message
 Extract a hidden string from a processed image.
+
 **Endpoint:** `POST /(alpha|bit)/encode`
+
 **Payload:** `image` (file)
 
 ```
