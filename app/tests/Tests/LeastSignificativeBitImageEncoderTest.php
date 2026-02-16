@@ -7,6 +7,7 @@ namespace Tests;
 use App\Application\ImageEncoder;
 use App\Domain\Exception\ImageEncodingException;
 use App\Infrastructure\LeastSignificativeBitImageEncoder;
+use PHPUnit\Framework\Attributes\TestDox;
 use PHPUnit\Framework\TestCase;
 
 class LeastSignificativeBitImageEncoderTest extends TestCase

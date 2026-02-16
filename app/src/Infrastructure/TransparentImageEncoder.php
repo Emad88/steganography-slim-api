@@ -93,7 +93,7 @@ final class TransparentImageEncoder extends GDImageEncoder
                     $channels = [
                         ($colorIndex >> 16) & 0xFF, // Red
                         ($colorIndex >> 8) & 0xFF,  // Green
-                        $colorIndex & 0xFF,          // Blue
+                        $colorIndex & 0xFF,         // Blue
                     ];
                     foreach ($channels as $byte) {
                         if ($byte == self::END_BYTE) {
