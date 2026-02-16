@@ -56,7 +56,7 @@ curl.exe -X POST http://localhost:8080/bit/decode `
 
 ## Steganography Algorithms
 
-#### Algorithm: `alpha` (Transparent Pixel Substitution)
+### Algorithm: `alpha` (Transparent Pixel Substitution)
 Leverages the fact that in PNG images, even fully transparent pixels have color channels (RGB) that can store data without affecting the image's appearance.
 
 **Mechanism:** Injects data exclusively into pixels that are fully transparent. It utilizes the 8 bits of each color channel (Red, Green, Blue), allowing for 3 bytes of storage per transparent pixel.
@@ -66,7 +66,7 @@ Leverages the fact that in PNG images, even fully transparent pixels have color 
 **Cons:** Variable Capacity. Storage is strictly limited by the number of transparent pixels available in the source image.
 
 
-#### Algorithm: `bit` (LSB Substitution)
+### Algorithm: `bit` (LSB Substitution)
 A technique that modifies the *Least Significant Bit* of each color channel.
 
 **Mechanism:** Replaces the last bit of the Red, Green, and Blue channels with message bits (providing 3 bits of storage per pixel).
