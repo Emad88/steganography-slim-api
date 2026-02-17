@@ -87,7 +87,6 @@ class LeastSignificativeBitImageEncoderTest extends TestCase
         $this->encoder->encode($this->inputTempFile, 'A'); // 16bit = 8bit message + 8bit control
     }
 
-
     #[TestDox('Alpha channels remain completely untouched during encoding')]
     public function test_alpha_channels_are_untouched(): void
     {

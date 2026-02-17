@@ -39,7 +39,7 @@ final class LeastSignificativeBitImageEncoder extends GDImageEncoder
 
         // Check if the message fits the image early
         $bitSpace = $width * $height * 3;
-        if((count($bytes)+1) * 8 > $bitSpace) {
+        if ((count($bytes) + 1) * 8 > $bitSpace) {
             throw new ImageEncodingException('Not enough pixels to write the message.');
         }
 

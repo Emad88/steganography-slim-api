@@ -11,6 +11,7 @@ Install Docker Desktop, clone the repository and run:
 
 ```
 docker compose up --build -d
+docker compose exec php composer install
 ```
 
 ## How to call the APIs
