@@ -17,7 +17,6 @@ final class DecodeImageApiController extends ApiController
     {
         $uploaded = $this->request->getUploadedFiles();
 
-        // Get Image
         $image = $uploaded['image'] ?? null;
 
         // Validation
@@ -40,13 +39,11 @@ final class DecodeImageApiController extends ApiController
                 data: ['message' => $output]
             ));
         } catch (ImageEncodingException $e) {
-            // Domain Exception Handling
             return $this->respond(new Payload(
                 error: $e->getMessage(),
                 status: StatusCodeInterface::STATUS_UNPROCESSABLE_ENTITY
             ));
         } catch (\Throwable $e) {
-            // Unexpected Error Handling
             return $this->respond(new Payload(
                 error: 'An internal error occurred: '.$e->getMessage(),
                 status: StatusCodeInterface::STATUS_INTERNAL_SERVER_ERROR

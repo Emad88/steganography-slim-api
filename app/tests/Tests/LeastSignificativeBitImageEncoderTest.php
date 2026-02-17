@@ -74,7 +74,7 @@ class LeastSignificativeBitImageEncoderTest extends TestCase
 
         // Create a 1x1 image with alpha channel
         $this->inputTempFile = __DIR__.'/test.png';
-        $im = imagecreatetruecolor(1, 1);
+        $im = imagecreatetruecolor(1, 5); // 15bit space
         imagealphablending($im, false);
         imagesavealpha($im, true);
 
@@ -84,7 +84,7 @@ class LeastSignificativeBitImageEncoderTest extends TestCase
         imagepng($im, $this->inputTempFile);
 
         // Encode message
-        $this->encoder->encode($this->inputTempFile, 'Short Message');
+        $this->encoder->encode($this->inputTempFile, 'A'); // 16bit = 8bit message + 8bit control
     }
 
 

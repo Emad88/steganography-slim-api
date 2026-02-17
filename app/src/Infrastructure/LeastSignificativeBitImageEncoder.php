@@ -37,6 +37,12 @@ final class LeastSignificativeBitImageEncoder extends GDImageEncoder
         $width = imagesx($im);
         $height = imagesy($im);
 
+        // Check if the message fits the image early
+        $bitSpace = $width * $height * 3;
+        if((count($bytes)+1) * 8 > $bitSpace) {
+            throw new ImageEncodingException('Not enough pixels to write the message.');
+        }
+
         for ($y = 0; $y < $height; $y++) {
             for ($x = 0; $x < $width; $x++) {
                 // Get the pixel color
@@ -72,7 +78,7 @@ final class LeastSignificativeBitImageEncoder extends GDImageEncoder
             }
         }
 
-        throw new ImageEncodingException('Not enough pixels to write the message.');
+        throw new ImageEncodingException('Unexpected error.');
     }
 
     public function decode(string $image): string
