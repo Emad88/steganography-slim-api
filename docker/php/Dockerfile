@@ -24,6 +24,3 @@ RUN docker-php-ext-configure gd --with-freetype --with-jpeg --with-webp
 RUN docker-php-ext-install -j$(nproc) gd
 
 WORKDIR /app
-
-# Adjust permissions for Laravel
-RUN chown -R www-data:www-data /var/www/storage /var/www/bootstrap/cache
