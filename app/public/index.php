@@ -2,10 +2,10 @@
 
 use App\Infrastructure\LeastSignificativeBitImageEncoder;
 use App\Infrastructure\TransparentImageEncoder;
-use App\UI\Http\DecodeImageApiController;
-use App\UI\Http\EncodeImageApiController;
-use App\UI\Http\FallbackApiController;
-use App\UI\Http\TestApiController;
+use App\Ui\Http\DecodeImageApiController;
+use App\Ui\Http\EncodeImageApiController;
+use App\Ui\Http\FallbackApiController;
+use App\Ui\Http\TestApiController;
 use Slim\Factory\AppFactory;
 use Slim\Interfaces\RouteCollectorProxyInterface as Group;
 
