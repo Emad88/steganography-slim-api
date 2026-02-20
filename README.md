@@ -142,9 +142,11 @@ The project uses **PHPUnit** to unit tests the encoding algorithms. To run the t
 docker-compose exec php composer test
 ```
 
-## Running the linter
+## Linting & formatting
 
-The project uses **Pint** to lint the code. To run the linter use:
+This project uses **Laravel Pint** for PHP code style.
+
+Run the linter:
 
 ```
 docker-compose exec php composer lint
